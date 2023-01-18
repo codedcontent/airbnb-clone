@@ -8,6 +8,7 @@ module.exports = {
       colors: {
         whitesmoke: "#F7F7F7",
         accent: "#FF385C",
+        myGray: "#C0C0C0",
       },
       fontFamily: {
         sans: ["Poppins", ...defaultTheme.fontFamily.sans],

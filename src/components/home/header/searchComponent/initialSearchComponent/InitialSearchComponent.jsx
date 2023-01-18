@@ -2,7 +2,7 @@ import React from "react";
 import useAppState from "../../../../../hooks/useAppState";
 
 const InitialSearchComponent = () => {
-  const { appState, setAppState } = useAppState();
+  const { setAppState } = useAppState();
 
   const handleSearchClick = (searchType) => {
     setAppState((prev) => ({
@@ -13,7 +13,7 @@ const InitialSearchComponent = () => {
   };
 
   return (
-    <div className="w-max rounded-full border-[1px] border-gray-300 px-4 py-1.5 hover:shadow-md">
+    <div className="w-max rounded-full border-[1px] border-gray-300 px-1.5 py-1.5 hover:shadow-md">
       <div className="flex justify-center items-center h-full divide-x-[1px]">
         <div
           className="h-full cursor-pointer grid place-items-center"

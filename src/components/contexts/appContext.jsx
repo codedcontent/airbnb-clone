@@ -6,6 +6,7 @@ export const AppProvider = ({ children }) => {
   const [appState, setAppState] = useState({
     initialSearchComponentClicked: false,
     initialSearchComponentClickedType: null,
+    selectedHomeSearchFilter: 0,
   });
 
   return (
