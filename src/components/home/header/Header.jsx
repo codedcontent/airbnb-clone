@@ -29,12 +29,12 @@ const Header = () => {
       <div className="flex gap-5 justify-center items-center">
         <p className="font-medium text-sm">Airbnb your home</p>
 
-        <i class="fa-solid fa-globe"></i>
+        <i className="fa-solid fa-globe"></i>
 
         <div className="flex gap-4 border-2 border-gray-300 p-2 py-3 pl-3 rounded-full justify-center items-center">
-          <i class="fa-solid fa-bars"></i>
+          <i className="fa-solid fa-bars"></i>
 
-          <i class="fa-solid fa-circle-user fa-2xl text-gray-500"></i>
+          <i className="fa-solid fa-circle-user fa-2xl text-gray-500"></i>
         </div>
       </div>
     </div>

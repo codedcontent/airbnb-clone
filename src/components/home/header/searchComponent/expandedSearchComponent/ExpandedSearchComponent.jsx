@@ -25,10 +25,10 @@ const ExpandedSearchComponent = () => {
       }
     };
 
-    // document.addEventListener("mousedown", handleMouseDown);
+    document.addEventListener("mousedown", handleMouseDown);
 
     return () => {
-      //   document.removeEventListener("mousedown", handleMouseDown);
+      document.removeEventListener("mousedown", handleMouseDown);
     };
   }, [expandedComponentRef]);
 
