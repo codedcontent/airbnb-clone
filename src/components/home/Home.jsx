@@ -3,6 +3,7 @@ import Banner from "./banner/Banner";
 import Header from "./header/Header";
 import AirbnbHomesFilters from "./AirbnbHomesFilters/AirbnbHomesFilters";
 import AirbnbListings from "./airbnbListings/AirbnbListings";
+import Footer from "./footer/Footer";
 
 const Home = () => {
   // Banner
@@ -22,6 +23,9 @@ const Home = () => {
 
       {/* Airbnb Listings */}
       <AirbnbListings />
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

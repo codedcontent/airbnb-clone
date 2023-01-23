@@ -10,10 +10,36 @@ const AirbnbListing = () => {
     setActiveListingImage(index);
   };
 
+  const handleCarouselClickRight = () => {
+    if (activeListingImage === 4) {
+      setActiveListingImage(0);
+    } else {
+      setActiveListingImage((prev) => prev + 1);
+    }
+  };
+
+  const handleCarouselClickLeft = () => {
+    if (activeListingImage === 0) {
+      setActiveListingImage(4);
+    } else {
+      setActiveListingImage((prev) => prev - 1);
+    }
+  };
+
   return (
-    <div className="w-full group">
+    <div className="w-full group grid gap-3 cursor-pointer">
       {/* Listing image, like button and others */}
       <div className="w-full relative">
+        {/* Carousel right arrow */}
+        {activeListingImage > 0 && (
+          <div
+            className="absolute left-5 top-1/2 -translate-y-1/2 group-hover:block hidden"
+            onClick={handleCarouselClickLeft}
+          >
+            <i className="fa-solid fa-circle-chevron-left fa-xl text-white"></i>
+          </div>
+        )}
+
         <img
           src={airbnbListingImage}
           alt="airbnbListingImage"
@@ -54,12 +80,37 @@ const AirbnbListing = () => {
         </div>
 
         {/* Carousel right arrow */}
-        <div className="absolute right-5 top-1/2 -translate-y-1/2 group-hover:block hidden">
+        <div
+          className="absolute right-5 top-1/2 -translate-y-1/2 group-hover:block hidden"
+          onClick={handleCarouselClickRight}
+        >
           <i className="fa-solid fa-circle-chevron-right fa-xl text-white"></i>
         </div>
       </div>
 
       {/* Listing description */}
+      <div className="grid px-1 gap-0.5">
+        {/* Name and rating */}
+        <div className="flex justify-between items-center">
+          <p className="font-semibold text-sm">La Lajita, Spain</p>
+
+          <div className="flex gap-1 items-center justify-center">
+            <i class="fa-solid fa-star fa-xs"></i>
+            <p className="font-light text-sm">5.0</p>
+          </div>
+        </div>
+
+        {/* Location venue */}
+        <p className="font-light text-gray-400 text-sm">On Lajita</p>
+
+        {/* Location available times */}
+        <p className="font-light text-gray-400 text-sm">Nov 1 - 8</p>
+
+        {/* Price per night */}
+        <p className="font-light text-gray-400 text-sm mt-2">
+          <span className="font-bold text-black">$188</span> night
+        </p>
+      </div>
     </div>
   );
 };

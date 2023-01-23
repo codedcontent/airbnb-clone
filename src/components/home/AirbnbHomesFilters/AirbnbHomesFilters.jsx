@@ -110,7 +110,7 @@ const AirbnbHomesFilters = () => {
   }, []);
 
   return (
-    <div className="xl:px-20 w-full py-4 flex gap- justify-center items-center">
+    <div className="xl:px-20 w-full flex gap-1 sticky top-20 left-0 justify-center items-center bg-white z-50">
       <i className="fa-regular fa-circle-left fa-xl"></i>
 
       {/* Home filters */}

@@ -3,11 +3,16 @@ import AirbnbListing from "./airbnbListing/AirbnbListing";
 
 const AirbnbListings = () => {
   return (
-    <div className="xl:px-20 w-full grid xl:grid-cols-4 gap-6 justify-between items-center">
+    <div className="xl:px-20 w-full grid xl:grid-cols-4 gap-6 justify-between items-center box-border mt-4">
       <AirbnbListing />
-      <p className="w-full">Listing</p>
-      <p className="w-full">Listing</p>
-      <p className="w-full">Listing</p>
+      <AirbnbListing />
+      <AirbnbListing />
+      <AirbnbListing />
+      <AirbnbListing />
+      <AirbnbListing />
+      <AirbnbListing />
+      <AirbnbListing />
+      <AirbnbListing />
     </div>
   );
 };
