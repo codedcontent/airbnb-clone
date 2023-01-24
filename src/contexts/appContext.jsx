@@ -7,6 +7,7 @@ export const AppProvider = ({ children }) => {
     initialSearchComponentClicked: false,
     initialSearchComponentClickedType: null,
     selectedHomeSearchFilter: 0,
+    isSupportOpen: false,
   });
 
   return (

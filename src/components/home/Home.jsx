@@ -4,6 +4,7 @@ import Header from "./header/Header";
 import AirbnbHomesFilters from "./AirbnbHomesFilters/AirbnbHomesFilters";
 import AirbnbListings from "./airbnbListings/AirbnbListings";
 import Footer from "./footer/Footer";
+import AirbnbMap from "./airbnbMap/AirbnbMap";
 
 const Home = () => {
   // Banner
@@ -23,6 +24,9 @@ const Home = () => {
 
       {/* Airbnb Listings */}
       <AirbnbListings />
+
+      {/* Show map hover-guide */}
+      <AirbnbMap />
 
       {/* Footer */}
       <Footer />

@@ -12,7 +12,6 @@ const AirbnbListings = () => {
       <AirbnbListing />
       <AirbnbListing />
       <AirbnbListing />
-      <AirbnbListing />
     </div>
   );
 };

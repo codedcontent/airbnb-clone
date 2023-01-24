@@ -27,7 +27,7 @@ const AirbnbListing = () => {
   };
 
   return (
-    <div className="w-full group grid gap-3 cursor-pointer">
+    <div className="w-full group grid gap-2 cursor-pointer">
       {/* Listing image, like button and others */}
       <div className="w-full relative">
         {/* Carousel right arrow */}
@@ -43,7 +43,7 @@ const AirbnbListing = () => {
         <img
           src={airbnbListingImage}
           alt="airbnbListingImage"
-          className="w-full h-72 rounded-2xl object-cover"
+          className="w-full h-80 rounded-2xl object-cover"
         />
 
         {/* Like button */}
@@ -54,7 +54,7 @@ const AirbnbListing = () => {
           }}
         >
           {isLiked ? (
-            <i class="fa-solid fa-heart fa-xl text-accent transition-all duration-700"></i>
+            <i className="fa-solid fa-heart fa-xl text-accent transition-all duration-700"></i>
           ) : (
             <i
               className={`fa-regular fa-heart fa-xl transition-all duration-700 text-white`}
@@ -89,13 +89,13 @@ const AirbnbListing = () => {
       </div>
 
       {/* Listing description */}
-      <div className="grid px-1 gap-0.5">
+      <div className="grid px-1">
         {/* Name and rating */}
         <div className="flex justify-between items-center">
           <p className="font-semibold text-sm">La Lajita, Spain</p>
 
           <div className="flex gap-1 items-center justify-center">
-            <i class="fa-solid fa-star fa-xs"></i>
+            <i className="fa-solid fa-star fa-xs"></i>
             <p className="font-light text-sm">5.0</p>
           </div>
         </div>
@@ -107,7 +107,7 @@ const AirbnbListing = () => {
         <p className="font-light text-gray-400 text-sm">Nov 1 - 8</p>
 
         {/* Price per night */}
-        <p className="font-light text-gray-400 text-sm mt-2">
+        <p className="font-light text-gray-400 text-sm mt-0.5">
           <span className="font-bold text-black">$188</span> night
         </p>
       </div>
