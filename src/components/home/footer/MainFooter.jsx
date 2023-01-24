@@ -12,7 +12,7 @@ const MainFooter = () => {
   };
 
   return (
-    <div className="flex justify-between items-center w-full">
+    <div className="flex justify-between items-center w-full h-full">
       <div className="flex gap-2 items-center">
         <a href="#" className="font-light text-sm">
           © 2023 Airbnb, Inc.
