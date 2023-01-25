@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../home/header/Header";
-import RoomDescription from "./roomDescription/RoomDescription";
+import ListingDescription from "./listingDescription/ListingDescription";
 
 const Room = () => {
   return (
@@ -9,7 +9,7 @@ const Room = () => {
       <Header />
 
       {/* Room In-depth description */}
-      <RoomDescription />
+      <ListingDescription />
     </div>
   );
 };
