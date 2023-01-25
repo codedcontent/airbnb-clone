@@ -8,6 +8,10 @@ export const AppProvider = ({ children }) => {
     initialSearchComponentClickedType: null,
     selectedHomeSearchFilter: 0,
     isSupportOpen: false,
+    listing: {
+      checkInDate: null,
+      checkOutDate: null,
+    },
   });
 
   return (

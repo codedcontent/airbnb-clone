@@ -1,4 +1,6 @@
 import React from "react";
+import ListingCheckIn from "../listingCheckIn/ListingCheckIn";
+import ListingReview from "../listingReview/ListingReview";
 
 const ListingDescription = () => {
   return (
@@ -99,7 +101,7 @@ const ListingDescription = () => {
 
       {/* Listing full description */}
       <div className="flex mt-12">
-        <div className="flex-1 pr-20 divide-y-[1px]">
+        <div className="w-3/5 flex-1 pr-20 divide-y-[1px]">
           {/* Listing host */}
           <div className="flex justify-between items-center pb-6">
             <div className="grid gap-1.5">
@@ -127,7 +129,7 @@ const ListingDescription = () => {
           </div>
 
           {/* About host experience */}
-          <div className="space-y-6 py-6">
+          <div className="space-y-6 py-10">
             {/* Experience */}
             <div className="flex gap-4 justify-start items-start">
               <div className="self-start">
@@ -146,7 +148,7 @@ const ListingDescription = () => {
             {/* Rating */}
             <div className="flex gap-4 justify-start items-start">
               <div className="self-start">
-                <i class="fa-regular fa-heart fa-xl text-[#333333]"></i>
+                <i className="fa-regular fa-heart fa-xl text-[#333333]"></i>
               </div>
 
               <div className="space-y-0.5">
@@ -161,7 +163,7 @@ const ListingDescription = () => {
             {/* Cancelation */}
             <div className="flex gap-4 justify-start items-start">
               <div className="self-start">
-                <i class="fa-regular fa-calendar fa-xl text-[#333333]"></i>
+                <i className="fa-regular fa-calendar fa-xl text-[#333333]"></i>
               </div>
 
               <div className="space-y-0.5">
@@ -171,7 +173,7 @@ const ListingDescription = () => {
           </div>
 
           {/* Air Cover */}
-          <div className="flex flex-col gap-3 py-6">
+          <div className="flex flex-col gap-3 py-10">
             <p className="flex w-max text-3xl font-bold">
               <span className="text-accent">air</span>
               <span className="text-black">cover</span>
@@ -186,10 +188,113 @@ const ListingDescription = () => {
               Learn more
             </a>
           </div>
+
+          {/* About listing space */}
+          <div className="space-y-4 py-10">
+            <div className="flex gap-2 place-items-center">
+              <i className="fa-solid fa-language"></i>
+
+              <p className="font-light text-sm">
+                Some info has been automatically translated.{" "}
+                <span className="underline cursor-pointer font-medium">
+                  Show original language
+                </span>
+              </p>
+            </div>
+
+            <p className="font-light">
+              Discover the Lov 'Nid Passion cabin, a cocoon of love perched at a
+              height of 6 meters. Enjoy the charming surroundings of this
+              romantic place to stay surrounded by nature.
+            </p>
+
+            <div className="w-full">
+              <p className="font-medium">The space</p>
+              <p className="font-light truncate overflow-hidden w-full">
+                You will access it with a spiral staircase that will take you to
+                the first part of the treehouse, consisting of a living room to
+                enjoy cocooning moments. A hanging
+              </p>
+            </div>
+
+            <div className="flex gap-1 place-items-center cursor-pointer">
+              <p className="font-medium text-sm">Show more</p>
+
+              <i className="fa-solid fa-chevron-right fa-xs"></i>
+            </div>
+          </div>
+
+          {/* Listing offerings */}
+          <div className="space-y-5 py-10">
+            <p className="text-xl font-medium">What this place offers</p>
+
+            <div className="grid grid-cols-2 gap-4">
+              <div className="flex gap-4 place-items-center">
+                <i className="fa-solid fa-leaf"></i>
+
+                <p className="font-light">Garden view</p>
+              </div>
+
+              <div className="flex gap-4 place-items-center">
+                <i className="fa-solid fa-mountain-city"></i>
+
+                <p className="font-light">Mountain view</p>
+              </div>
+
+              <div className="flex gap-4 place-items-center">
+                <i className="fa-solid fa-umbrella-beach"></i>
+
+                <p className="font-light">Beach access - Beachfront</p>
+              </div>
+
+              <div className="flex gap-4 place-items-center">
+                <i className="fa-solid fa-kitchen-set"></i>
+
+                <p className="font-light">Kitchen</p>
+              </div>
+
+              <div className="flex gap-4 place-items-center">
+                <i className="fa-solid fa-tv"></i>
+
+                <p className="font-light">
+                  HDTV with standard cable, premium cable
+                </p>
+              </div>
+
+              <div className="flex gap-4 place-items-center">
+                <i className="fa-solid fa-car"></i>
+
+                <p className="font-light">Free parking on premises </p>
+              </div>
+
+              <div className="flex gap-4 place-items-center">
+                <i className="fa-solid fa-wifi"></i>
+
+                <p className="font-light">Wifi</p>
+              </div>
+            </div>
+
+            <button className="px-5 py-3 border-[1px] border-black rounded-md hover:bg-gray-100">
+              Show all 12 amenities
+            </button>
+          </div>
+
+          {/* Listing check-in */}
+          <div className="py-10">
+            <ListingCheckIn />
+          </div>
+
+          {/* Listing reviews */}
+          <div className="py-10">
+            <ListingReview />
+          </div>
         </div>
 
         {/* Sticky Listing Price */}
-        <div className="bg-white sticky top-24 w-96 h-96 rounded-xl border-[1px] border-myGray shadow-xl"></div>
+        <div className="sticky top-36 w-max h-max space-y-4 flex flex-col place-items-center">
+          <div className="bg-white w-96 h-96 rounded-xl border-[1px] border-myGray shadow-lg"></div>
+          <p className="text-sm text-myGray">Report this listing</p>
+        </div>
       </div>
     </div>
   );
