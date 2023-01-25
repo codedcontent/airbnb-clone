@@ -5,9 +5,7 @@ import { useEffect } from "react";
 const Calendar = () => {
   const [dateRange, handleRangeChange] = useState([new Date(), new Date()]);
 
-  useEffect(() => {
-    console.log(dateRange);
-  }, [dateRange]);
+  useEffect(() => {}, [dateRange]);
 
   return (
     <div className="w-full h-full relative">

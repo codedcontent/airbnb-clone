@@ -291,10 +291,10 @@ const ListingDescription = () => {
         </div>
 
         {/* Sticky Listing Price */}
-        <div className="sticky top-36 w-max h-max space-y-4 flex flex-col place-items-center">
+        {/* <div className="sticky top-36 w-max h-max space-y-4 flex flex-col place-items-center">
           <div className="bg-white w-96 h-96 rounded-xl border-[1px] border-myGray shadow-lg"></div>
           <p className="text-sm text-myGray">Report this listing</p>
-        </div>
+        </div> */}
       </div>
     </div>
   );
