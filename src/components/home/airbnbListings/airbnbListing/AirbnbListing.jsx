@@ -27,7 +27,11 @@ const AirbnbListing = () => {
   };
 
   return (
-    <div className="w-full group grid gap-2 cursor-pointer">
+    <a
+      target={"_blank"}
+      href="/rooms/123abc"
+      className="w-full group grid gap-2 cursor-pointer"
+    >
       {/* Listing image, like button and others */}
       <div className="w-full relative">
         {/* Carousel right arrow */}
@@ -111,7 +115,7 @@ const AirbnbListing = () => {
           <span className="font-bold text-black">$188</span> night
         </p>
       </div>
-    </div>
+    </a>
   );
 };
 

@@ -13,7 +13,7 @@ const Header = () => {
         initialSearchComponentClicked
           ? " items-start pt-9 transition-all duration-200 h-40"
           : "transition-all duration-200 h-20 items-center"
-      } flex justify-between  xl:px-20 border-y-[1px] border-y-gray-200 sticky top-0 left-0`}
+      } flex justify-between xl:px-20 border-y-[1px] border-y-gray-200 sticky top-0 left-0`}
     >
       <a
         className="flex items-center gap-1 justify-center cursor-pointer"
