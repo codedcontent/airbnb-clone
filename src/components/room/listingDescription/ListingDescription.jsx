@@ -278,23 +278,84 @@ const ListingDescription = () => {
               Show all 12 amenities
             </button>
           </div>
-
-          {/* Listing check-in */}
-          <div className="py-10">
-            <ListingCheckIn />
-          </div>
-
-          {/* Listing reviews */}
-          <div className="py-10">
-            <ListingReview />
-          </div>
         </div>
 
         {/* Sticky Listing Price */}
-        {/* <div className="sticky top-36 w-max h-max space-y-4 flex flex-col place-items-center">
+        <div className="sticky top-36 w-max h-max space-y-4 flex flex-col place-items-center">
           <div className="bg-white w-96 h-96 rounded-xl border-[1px] border-myGray shadow-lg"></div>
           <p className="text-sm text-myGray">Report this listing</p>
-        </div> */}
+        </div>
+      </div>
+
+      <div className="w-full divide-y-[1px]">
+        {/* Listing check-in */}
+        <div className="py-10">
+          <ListingCheckIn />
+        </div>
+
+        {/* Listing reviews */}
+        <div className="py-10">
+          <ListingReview />
+        </div>
+
+        {/* Listing map location */}
+        <div className="py-10 flex flex-col gap-4">
+          <p className="font-medium text-xl">Where you'll be</p>
+
+          <p className="font-light">
+            Ponta Delgada, S. Miguel - Açores, Portugal
+          </p>
+
+          <div className="w-full h-[470px] mt-2 relative">
+            <img
+              src="https://media.wired.com/photos/59269cd37034dc5f91bec0f1/191:100/w_1280,c_limit/GoogleMapTA.jpg"
+              alt="map image"
+              className="w-full h-full object-cover"
+            />
+
+            {/* Listing location */}
+            <div className="absolute top-1/2 left-1/2 h-10 w-10 flex justify-center items-center bg-accent rounded-full -translate-x-1/2 -translate-y-1/2">
+              <i class="fa-solid fa-house text-white"></i>
+            </div>
+
+            {/* Controls */}
+            <div className="absolute right-5 top-5 flex gap-4">
+              {/* Transit stuff */}
+              <div className="flex gap-2 items-center justify-center bg-white p-2 rounded-md shadow-lg hover:bg-gray-100 cursor-pointer h-max">
+                <input
+                  type="checkbox"
+                  name="public transit"
+                  id="publicTransit"
+                  className="h-6 w-6"
+                />
+
+                <p className="font-medium text-sm">Public Transit</p>
+              </div>
+
+              {/* Map controls */}
+              <div className="flex flex-col gap-y-2">
+                <div className="bg-white group rounded-md p-2 shadow-lg hover:bg-gray-100 cursor-pointer">
+                  <i class="fa-solid fa-person fa-xl text-[#FDBF2D] transition group-hover:skew-x-12"></i>
+                </div>
+
+                <div className="bg-white py-2 w-full rounded-md shadow-lg hover:bg-gray-100 cursor-pointer divide-y-2 flex flex-col gap-3">
+                  <div className="w-full flex justify-center items-center">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+
+                  <div className="w-full flex justify-center items-center pt-3">
+                    <i class="fa-solid fa-plus"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Owner */}
+            <p className="absolute bottom-1 left-1 text-sm font-light shadow-md bg-white text-black py-1 px-4 rounded-md">
+              Map by Ogechukwu Mephors
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
