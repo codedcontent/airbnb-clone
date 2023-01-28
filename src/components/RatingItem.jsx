@@ -3,10 +3,6 @@ import React from "react";
 const RatingItem = ({ ratingTitle, rating }) => {
   const ratingPercentage = (rating / 5) * 100;
 
-  console.log(ratingPercentage);
-
-  const ratingProgress = `${ratingPercentage}%`;
-
   return (
     <div className="w-full flex justify-between items-center pr-20">
       <p className="font-light">{ratingTitle}</p>

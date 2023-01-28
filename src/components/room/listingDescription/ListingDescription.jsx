@@ -5,28 +5,34 @@ import ThingsToKnow from "./ThingsToKnow";
 
 const ListingDescription = () => {
   return (
-    <div className="px-52 py-4">
+    <div className="px-52 py-5">
       {/* Listing title */}
       <div className="flex gap-2 items-center w-max">
         <i className="fa-solid fa-language fa-xl"></i>
 
-        <p className="font-medium text-2xl">
-          Lov 'Nid Passion cabin for 2 people
-        </p>
+        <p className="font-medium text-2xl">Flea Windmill | The Mill</p>
       </div>
 
       {/* Listing review and other buttons */}
       <div className="flex justify-between items-center mt-2">
         {/* Review count and destination location */}
         <div className="flex justify-between items-center gap-2">
+          <div className="flex justify-center items-center w-max gap-1">
+            <i class="fa-solid fa-star fa-xs"></i>
+
+            <p className="text-sm font-medium">4.96</p>
+          </div>
+
+          <span className="text-xs self-end">•</span>
+
           <a href="#" className="underline text-sm font-medium">
-            2 reviews
+            169 reviews
           </a>
 
           <span className="text-xs self-end">•</span>
 
           <a href="#" className="underline text-sm font-medium">
-            Joncherey, Bourgogne-Franche-Comté, France
+            Ponta Delgada, S. Miguel - Açores, Portugal
           </a>
         </div>
 
@@ -54,7 +60,7 @@ const ListingDescription = () => {
       <div className="grid gap-2 grid-cols-4 grid-rows-2 mt-6 relative">
         <div className="bg-accent transition-all duration-300 hover:brightness-75 w-full col-span-2 row-span-2 rounded-l-2xl">
           <img
-            src="https://a0.muscache.com/im/pictures/miso/Hosting-610511843622686196/original/253bfa1e-8c53-4dc0-a3af-0a75728c0708.jpeg?im_w=720"
+            src="https://a0.muscache.com/im/pictures/miso/Hosting-5264493/original/10d2c21f-84c2-46c5-b20b-b51d1c2c971a.jpeg?im_w=720"
             alt="room destination image"
             className="object-cover h-[360px] w-full rounded-l-2xl"
           />
@@ -62,7 +68,7 @@ const ListingDescription = () => {
 
         <div className="bg-accent transition-all duration-300 hover:brightness-75 h-44 w-full">
           <img
-            src="https://a0.muscache.com/im/pictures/miso/Hosting-610511843622686196/original/5d54cea0-788e-462e-83a3-5142da58193a.jpeg?im_w=720"
+            src="https://a0.muscache.com/im/pictures/miso/Hosting-5264493/original/e3beaf52-13ab-44ed-bbfa-56ccf43bab98.jpeg?im_w=720"
             alt="image-2"
             className="object-cover h-full w-full"
           />
@@ -70,7 +76,7 @@ const ListingDescription = () => {
 
         <div className="bg-accent transition-all duration-300 hover:brightness-75 h-44 w-full rounded-tr-2xl">
           <img
-            src="https://a0.muscache.com/im/pictures/miso/Hosting-610511843622686196/original/108657cd-1b06-4510-9556-59b53a48d5b9.jpeg?im_w=720"
+            src="https://a0.muscache.com/im/pictures/miso/Hosting-5264493/original/858b29eb-53f3-4707-87a6-444f4375f888.jpeg?im_w=720"
             alt="image-3"
             className="object-cover h-full w-full rounded-tr-2xl"
           />
@@ -78,7 +84,7 @@ const ListingDescription = () => {
 
         <div className="bg-accent transition-all duration-300 hover:brightness-75 h-44 w-full">
           <img
-            src="https://a0.muscache.com/im/pictures/miso/Hosting-610511843622686196/original/19a492ca-0e15-4b4b-9711-6000b657c094.jpeg?im_w=720"
+            src="https://a0.muscache.com/im/pictures/miso/Hosting-5264493/original/bc9fdbba-a126-4357-946b-4d5f5581ca0f.jpeg?im_w=720"
             alt="image-4"
             className="object-cover h-full w-full"
           />
@@ -86,7 +92,7 @@ const ListingDescription = () => {
 
         <div className="bg-accent transition-all duration-300 hover:brightness-75 h-44 w-full rounded-br-2xl">
           <img
-            src="https://a0.muscache.com/im/pictures/miso/Hosting-610511843622686196/original/eb5b6b2f-7815-42f3-b804-c1030c21596e.jpeg?im_w=720"
+            src="https://a0.muscache.com/im/pictures/miso/Hosting-5264493/original/d1e6500a-3b0f-451d-8f6e-a6f067930a0d.jpeg?im_w=720"
             alt="image-5"
             className="object-cover h-full w-full rounded-br-2xl"
           />
@@ -120,7 +126,7 @@ const ListingDescription = () => {
             </div>
 
             {/* Profile pic */}
-            <a href="#profile-pic cursor-pointer">
+            <a href="#hostInfo">
               <img
                 src="https://a0.muscache.com/im/pictures/user/a6ccc650-1184-4401-8f29-4a7aabfc140b.jpg?aki_policy=profile_large"
                 alt="profile pic"
@@ -282,9 +288,96 @@ const ListingDescription = () => {
         </div>
 
         {/* Sticky Listing Price */}
-        <div className="sticky top-36 w-max h-max space-y-4 flex flex-col place-items-center">
-          <div className="bg-white w-96 h-96 rounded-xl border-[1px] border-myGray shadow-lg"></div>
-          <p className="text-sm text-myGray">Report this listing</p>
+        <div className="sticky top-32 w-[374px] h-max space-y-4 flex flex-col place-items-center">
+          <div className="bg-white w-full  rounded-xl border-[1px] border-myGray shadow-lg flex-col flex justify-center items-center p-6 gap-4">
+            {/* Price */}
+            <div className="flex justify-between w-full items-center">
+              {/* Price */}
+              <div className="flex w-full justify-between">
+                <div className="flex items-center gap-1">
+                  <p className="font-medium text-xl">$348</p>{" "}
+                  <span className="text-sm text-light">night</span>
+                </div>
+              </div>
+
+              {/* Review and rating shit */}
+              <div className="flex justify-center items-center gap-1 w-full">
+                <i class="fa-solid fa-star fa-xs"></i>
+                <span className="text-sm font-medium">4.96</span>
+                <span className="text-xs font-light self-end">•</span>
+                <span className="text-sm font-medium text-[#717171] underline">
+                  169 reviews
+                </span>
+              </div>
+            </div>
+
+            {/* Reserve dates and guest */}
+            <div className="w-full mt-2 cursor-pointer">
+              {/* Check in && check out */}
+              <div className="flex divide-x-[1px] border-myGray rounded-t-md w-full justify-between items-center border-[1px] border-b-0">
+                <div className="w-full p-3">
+                  <p className="text-[10px] font-semibold">CHECK-IN</p>
+                  <p className="text-sm font-light">8/26/2023</p>
+                </div>
+
+                <div className="w-full p-3">
+                  <p className="text-[10px] font-semibold">CHECKOUT</p>
+                  <p className="text-sm font-light">8/31/2023</p>
+                </div>
+              </div>
+
+              {/* Guest */}
+              <div className="flex border-myGray rounded-b-md w-full justify-between items-center border-[1px] p-3">
+                <div className="w-full">
+                  <p className="text-xs font-medium">GUESTS</p>
+                  <p className="text-sm font-light">1 guest</p>
+                </div>
+
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </div>
+
+            {/* Reserve button */}
+            <button className="w-full py-3 bg-[#F2265E] text-white rounded-lg">
+              Reserve
+            </button>
+
+            <p className="font-light text-sm">You won't be charged yet</p>
+
+            {/* price break down */}
+            <div className="divide-y-[1px] w-full">
+              <div className="flex w-full justify-between mb-6 my-4">
+                <div className="font-light underline text-sm">
+                  $368 x 5 nights
+                </div>
+
+                <div className="font-light underline text-sm">$1,740</div>
+              </div>
+
+              <div className="flex w-full justify-between pt-4">
+                <div className="font-medium">Total before taxes</div>
+
+                <div className="font-light underline text-sm">$1,740</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Rare find */}
+          <div className="p-4 flex border-2 place-items-center gap-4 rounded-xl">
+            <p className="font-light">
+              <span className="font-medium"> This is a rare find</span> Moinho's
+              place on Airbnb is usually fully booked.
+            </p>
+
+            <i className="fa-regular fa-gem fa-2x text-accent"></i>
+          </div>
+
+          {/* Report listing */}
+          <div className="flex justify-center items-center gap-4 text-[#717171] cursor-pointer">
+            <i class="fa-solid fa-flag fa-sm"></i>
+
+            <p className="text-sm underline font-medium">Report this listing</p>
+          </div>
         </div>
       </div>
 
@@ -317,7 +410,7 @@ const ListingDescription = () => {
 
             {/* Listing location */}
             <div className="absolute top-1/2 left-1/2 h-10 w-10 flex justify-center items-center bg-accent rounded-full -translate-x-1/2 -translate-y-1/2 cursor-pointer">
-              <i class="fa-solid fa-house text-white"></i>
+              <i className="fa-solid fa-house text-white"></i>
             </div>
 
             {/* Controls */}
@@ -337,16 +430,16 @@ const ListingDescription = () => {
               {/* Map controls */}
               <div className="flex flex-col gap-y-2">
                 <div className="bg-white group rounded-md p-2 shadow-lg hover:bg-gray-100 cursor-pointer">
-                  <i class="fa-solid fa-person fa-xl text-[#FDBF2D] transition group-hover:skew-x-12"></i>
+                  <i className="fa-solid fa-person fa-xl text-[#FDBF2D] transition group-hover:skew-x-12"></i>
                 </div>
 
                 <div className="bg-white py-2 w-full rounded-md shadow-lg hover:bg-gray-100 cursor-pointer divide-y-2 flex flex-col gap-3">
                   <div className="w-full flex justify-center items-center">
-                    <i class="fa-solid fa-location-dot"></i>
+                    <i className="fa-solid fa-location-dot"></i>
                   </div>
 
                   <div className="w-full flex justify-center items-center pt-3">
-                    <i class="fa-solid fa-plus"></i>
+                    <i className="fa-solid fa-plus"></i>
                   </div>
                 </div>
               </div>
@@ -382,13 +475,13 @@ const ListingDescription = () => {
             <div className="flex flex-col gap-5 pr-32">
               <div className="flex w-max justify-center items-center gap-6">
                 <div className="flex gap-3">
-                  <i class="fa-solid fa-star"></i>
+                  <i className="fa-solid fa-star"></i>
 
                   <p className="font-light">254 Reviews</p>
                 </div>
 
                 <div className="flex gap-3">
-                  <i class="fa-solid fa-shield"></i>
+                  <i className="fa-solid fa-shield"></i>
 
                   <p className="font-light">Identity verified</p>
                 </div>
@@ -429,7 +522,7 @@ const ListingDescription = () => {
               </button>
 
               <div className="flex items-center gap-4 w-1/2">
-                <i class="fa-solid fa-user-shield text-accent"></i>
+                <i className="fa-solid fa-user-shield text-accent"></i>
 
                 <p className="font-extralight text-xs">
                   To protect your payment, never transfer money or communicate

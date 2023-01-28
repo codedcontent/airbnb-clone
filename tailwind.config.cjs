@@ -9,6 +9,7 @@ module.exports = {
         whitesmoke: "#F7F7F7",
         accent: "#FF385C",
         myGray: "#C0C0C0",
+        airbnbGray: "#717171",
       },
       fontFamily: {
         sans: ["Poppins", ...defaultTheme.fontFamily.sans],

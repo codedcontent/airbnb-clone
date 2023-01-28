@@ -149,50 +149,51 @@ const ListingFooter = () => {
 
             <p className="text-black text-sm">•</p>
 
-            <a href="#" className="font-light text-sm">
+            <a href="#" className="font-light text-sm hover:underline">
               Terms
             </a>
 
             <p className="text-black text-sm">•</p>
 
-            <a href="#" className="font-light text-sm">
+            <a href="#" className="font-light text-sm hover:underline">
               Sitemap
             </a>
 
             <p className="text-black text-sm">•</p>
 
-            <a href="#" className="font-light text-sm">
+            <a href="#" className="font-light text-sm hover:underline">
               Privacy
             </a>
 
             <p className="text-black text-sm">•</p>
 
-            <a href="#" className="font-light text-sm">
+            <a href="#" className="font-light text-sm hover:underline">
               Your Privacy Choices
             </a>
           </div>
 
           <div className="flex gap-8">
             {/* Language */}
-            <div className="flex gap-2 place-items-center">
+            <div className="flex gap-2 place-items-center cursor-pointer">
               <i className="fa-solid fa-globe fa-sm"></i>
-              <p className="font-semibold text-sm">English (US)</p>
+              <p className="font-semibold text-sm hover:underline">
+                English (US)
+              </p>
             </div>
 
             {/* Currency */}
-            <div className="flex gap-2 place-items-center">
+            <div className="flex gap-2 place-items-center cursor-pointer">
               <p className="font-semibold text-sm">$</p>
-
-              <p className="font-semibold text-sm">USD</p>
+              <p className="font-semibold text-sm hover:underline">USD</p>
             </div>
 
             {/* Social media */}
             <div className="flex gap-6 place-items-center ml-8">
-              <i class="fa-brands fa-facebook-f"></i>
+              <i className="fa-brands fa-facebook-f"></i>
 
-              <i class="fa-brands fa-twitter"></i>
+              <i className="fa-brands fa-twitter"></i>
 
-              <i class="fa-brands fa-instagram"></i>
+              <i className="fa-brands fa-instagram"></i>
             </div>
           </div>
         </div>

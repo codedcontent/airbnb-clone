@@ -5,7 +5,7 @@ import ListingFooter from "./ListingFooter";
 
 const Room = () => {
   return (
-    <div className="">
+    <div className="w-full">
       {/* Header */}
       <Header />
 

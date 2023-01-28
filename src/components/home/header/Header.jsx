@@ -1,4 +1,5 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import useAppState from "../../../hooks/useAppState";
 import SearchComponent from "./searchComponent/SearchComponent";
 
@@ -7,13 +8,19 @@ const Header = () => {
     appState: { initialSearchComponentClicked },
   } = useAppState();
 
+  const location = useLocation();
+
+  console.log(location);
+
   return (
     <div
       className={`w-full z-50 bg-white ${
         initialSearchComponentClicked
           ? " items-start pt-9 transition-all duration-200 h-40"
           : "transition-all duration-200 h-20 items-center"
-      } flex justify-between xl:px-20 border-y-[1px] border-y-gray-200 sticky top-0 left-0`}
+      } flex justify-between border-y-[1px] border-y-gray-200 top-0 left-0 ${
+        location.pathname === "/" ? "sticky px-52 xl:px-20" : "px-52"
+      }`}
     >
       <a
         className="flex items-center gap-1 justify-center cursor-pointer"

@@ -37,7 +37,7 @@ const ListingReview = () => {
     <div className="flex flex-col gap-10">
       {/* Total rating and number of reviews */}
       <div className="flex place-items-center w-max gap-2">
-        <i class="fa-solid fa-star"></i>
+        <i className="fa-solid fa-star"></i>
         <p className="text-xl font-medium flex gap-1">
           <span>4.96</span>
           <span>•</span>
