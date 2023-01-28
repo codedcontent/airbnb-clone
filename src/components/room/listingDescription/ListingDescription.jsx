@@ -1,6 +1,7 @@
 import React from "react";
 import ListingCheckIn from "../listingCheckIn/ListingCheckIn";
 import ListingReview from "../listingReview/ListingReview";
+import ThingsToKnow from "./ThingsToKnow";
 
 const ListingDescription = () => {
   return (
@@ -287,6 +288,7 @@ const ListingDescription = () => {
         </div>
       </div>
 
+      {/* After our sticky card */}
       <div className="w-full divide-y-[1px]">
         {/* Listing check-in */}
         <div className="py-10">
@@ -314,7 +316,7 @@ const ListingDescription = () => {
             />
 
             {/* Listing location */}
-            <div className="absolute top-1/2 left-1/2 h-10 w-10 flex justify-center items-center bg-accent rounded-full -translate-x-1/2 -translate-y-1/2">
+            <div className="absolute top-1/2 left-1/2 h-10 w-10 flex justify-center items-center bg-accent rounded-full -translate-x-1/2 -translate-y-1/2 cursor-pointer">
               <i class="fa-solid fa-house text-white"></i>
             </div>
 
@@ -355,6 +357,92 @@ const ListingDescription = () => {
               Map by Ogechukwu Mephors
             </p>
           </div>
+        </div>
+
+        {/* Host Info */}
+        <div id="hostInfo" className="w-full py-10 space-y-5">
+          <div className="w-max flex items-center gap-5">
+            <img
+              src="https://a0.muscache.com/im/users/27251904/profile_pic/1423136116/original.jpg?im_w=240"
+              alt="profile pic main"
+              className="w-16 h-16 rounded-full"
+            />
+
+            {/* Name, pic & time joined */}
+            <div className="space-y-1">
+              <p className="font-medium text-xl">Hosted by Moinho</p>
+              <p className="font-light text-sm text-gray-500">
+                Joined in February 2015
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 justify-start w-full">
+            {/* Left items */}
+            <div className="flex flex-col gap-5 pr-32">
+              <div className="flex w-max justify-center items-center gap-6">
+                <div className="flex gap-3">
+                  <i class="fa-solid fa-star"></i>
+
+                  <p className="font-light">254 Reviews</p>
+                </div>
+
+                <div className="flex gap-3">
+                  <i class="fa-solid fa-shield"></i>
+
+                  <p className="font-light">Identity verified</p>
+                </div>
+              </div>
+
+              <p className="font-light">
+                Situated in Feteiras, 16 km from Ponta Delgada, Moinho das
+                Feteiras features a garden and free Wi-Fi.
+              </p>
+
+              <p className="font-light">
+                All air-conditioned units include a patio, dining area and
+                seating area with a flat-screen cable TV. Each unit includes an
+                en-suite bathroom with a shower, a hairdryer and free
+                toiletries.
+              </p>
+
+              <p className="font-light">
+                There are barbecue facilities and a terrace at this property.
+                Guests can go hiking and biking nearby.
+              </p>
+            </div>
+
+            {/* Right items */}
+            <div className="flex flex-col gap-6 pr-20">
+              <div className="flex flex-col gap-3">
+                <p className="font-light">Policy number: Exempt</p>
+
+                <p className="font-light">Languages: English, Português</p>
+
+                <p className="font-light">Response rate: 93%</p>
+
+                <p className="font-light">Response time: within an hour</p>
+              </div>
+
+              <button className="py-3 px-6 border-[1px] border-black w-max rounded-md">
+                Contact Host
+              </button>
+
+              <div className="flex items-center gap-4 w-1/2">
+                <i class="fa-solid fa-user-shield text-accent"></i>
+
+                <p className="font-extralight text-xs">
+                  To protect your payment, never transfer money or communicate
+                  outside of the Airbnb website or app.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Things to know */}
+        <div id="hostInfo" className="w-full py-10 space-y-5">
+          <ThingsToKnow />
         </div>
       </div>
     </div>
