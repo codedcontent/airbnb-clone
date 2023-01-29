@@ -112,7 +112,7 @@ const ListingDescription = () => {
           {/* Listing host */}
           <div className="flex justify-between items-center pb-6">
             <div className="grid gap-1.5">
-              <p className="text-xl font-medium">Treehouse hosted by Gaspard</p>
+              <p className="text-xl font-medium">Windmill hosted by Moinho</p>
 
               <div className="space-x-2 flex">
                 <p className="font-light text-sm">2 guests</p>
@@ -135,19 +135,18 @@ const ListingDescription = () => {
             </a>
           </div>
 
-          {/* About host experience */}
+          {/* Features and some info about listing */}
           <div className="space-y-6 py-10">
-            {/* Experience */}
             <div className="flex gap-4 justify-start items-start">
               <div className="self-start">
-                <i className="fa-regular fa-star fa-xl text-[#333333]"></i>
+                <i class="fa-solid fa-house-laptop fa-xl"></i>
               </div>
 
               <div className="space-y-0.5">
-                <p className="font-medium">Experienced host</p>
+                <p className="font-medium">Dedicated workspace</p>
 
                 <p className="text-sm text-gray-500 font-light">
-                  Gaspard has 117 reviews for other places.
+                  A private room with wifi that's well-suited for working.
                 </p>
               </div>
             </div>
@@ -155,14 +154,14 @@ const ListingDescription = () => {
             {/* Rating */}
             <div className="flex gap-4 justify-start items-start">
               <div className="self-start">
-                <i className="fa-regular fa-heart fa-xl text-[#333333]"></i>
+                <i className="fa-solid fa-door-open fa-xl text-[#333333]"></i>
               </div>
 
               <div className="space-y-0.5">
-                <p className="font-medium">Highly rated Host</p>
+                <p className="font-medium">Self check-in</p>
 
                 <p className="text-sm text-gray-500 font-light">
-                  Gaspard has received 5-star ratings from 90% of recent guests.
+                  Check yourself in with the keypad.
                 </p>
               </div>
             </div>
@@ -210,19 +209,19 @@ const ListingDescription = () => {
             </div>
 
             <p className="font-light">
-              Discover the Lov 'Nid Passion cabin, a cocoon of love perched at a
-              height of 6 meters. Enjoy the charming surroundings of this
-              romantic place to stay surrounded by nature.
+              Built in the 19th century, with a 360 degrees view over the sea
+              and surroundings on the top floor.
             </p>
 
-            <div className="w-full">
-              <p className="font-medium">The space</p>
-              <p className="font-light truncate overflow-hidden w-full">
-                You will access it with a spiral staircase that will take you to
-                the first part of the treehouse, consisting of a living room to
-                enjoy cocooning moments. A hanging
-              </p>
-            </div>
+            <p className="font-light">
+              It features a Bedroom with a king size bed, a very well-decorated
+              living room with kitchenette, and a WC.
+            </p>
+
+            <p className="font-light truncate overflow-hidden w-full">
+              Free WiFi, air conditioning, Led TV and DVD player. Private
+              parking inside the premises, providing extra security
+            </p>
 
             <div className="flex gap-1 place-items-center cursor-pointer">
               <p className="font-medium text-sm">Show more</p>
@@ -231,8 +230,19 @@ const ListingDescription = () => {
             </div>
           </div>
 
+          {/* Sleeping place */}
+          <div className="py-10 space-y-5">
+            <p className="text-xl font-medium">Where you'll sleep</p>
+
+            <div className="p-6 border-[1px] w-max pr-20 rounded-lg">
+              <i class="fa-solid fa-bed fa-xl"></i>
+              <p className="font-medium mt-5">Bedroom</p>
+              <p className="font-light mt-2 text-sm">1 double bed</p>
+            </div>
+          </div>
+
           {/* Listing offerings */}
-          <div className="space-y-5 py-10">
+          <div className="flex flex-col gap-5 py-10">
             <p className="text-xl font-medium">What this place offers</p>
 
             <div className="grid grid-cols-2 gap-4">
@@ -281,10 +291,17 @@ const ListingDescription = () => {
               </div>
             </div>
 
-            <button className="px-5 py-3 border-[1px] border-black rounded-md hover:bg-gray-100">
+            <button className="px-5 py-3 w-max mt-10 border-[1px] border-black rounded-md hover:bg-gray-100">
               Show all 12 amenities
             </button>
           </div>
+
+          {/* Listing check-in */}
+          <div className="py-10">
+            <ListingCheckIn />
+          </div>
+
+          <hr />
         </div>
 
         {/* Sticky Listing Price */}
@@ -383,11 +400,6 @@ const ListingDescription = () => {
 
       {/* After our sticky card */}
       <div className="w-full divide-y-[1px]">
-        {/* Listing check-in */}
-        <div className="py-10">
-          <ListingCheckIn />
-        </div>
-
         {/* Listing reviews */}
         <div className="py-10">
           <ListingReview />
