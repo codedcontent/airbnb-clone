@@ -1,11 +1,63 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useState } from "react";
 import ListingCheckIn from "../listingCheckIn/ListingCheckIn";
 import ListingReview from "../listingReview/ListingReview";
+import ListingHeader from "./ListingHeader";
 import ThingsToKnow from "./ThingsToKnow";
 
 const ListingDescription = () => {
+  const [showListingHeader, setShowListingHeader] = useState(false);
+  const [showNavReserve, setShowNavReserve] = useState(false);
+
+  // UseEffect to hide and show price carousel
+  useEffect(() => {
+    const reserveButton = document.getElementById("reserveListingButton");
+
+    const handleScroll = () => {
+      const rect = reserveButton.getBoundingClientRect();
+
+      // Check if the button is no longer visible
+      if (rect.bottom <= 75) {
+        setShowNavReserve(true);
+      } else {
+        setShowNavReserve(false);
+      }
+    };
+
+    document.addEventListener("scroll", handleScroll);
+
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  // UseEffect to hide and show main header
+  useEffect(() => {
+    const imageGallery = document.getElementById("imageGallery");
+
+    const handleScroll = () => {
+      const rect = imageGallery.getBoundingClientRect();
+
+      // Check if the button is no longer visible
+      if (rect.bottom <= 0) {
+        setShowListingHeader(true);
+      } else {
+        setShowListingHeader(false);
+      }
+    };
+
+    document.addEventListener("scroll", handleScroll);
+
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="px-52 py-5">
+      {/* Listing header */}
+      {showListingHeader && <ListingHeader show={showNavReserve} />}
+
       {/* Listing title */}
       <div className="flex gap-2 items-center w-max">
         <i className="fa-solid fa-language fa-xl"></i>
@@ -18,7 +70,7 @@ const ListingDescription = () => {
         {/* Review count and destination location */}
         <div className="flex justify-between items-center gap-2">
           <div className="flex justify-center items-center w-max gap-1">
-            <i class="fa-solid fa-star fa-xs"></i>
+            <i className="fa-solid fa-star fa-xs"></i>
 
             <p className="text-sm font-medium">4.96</p>
           </div>
@@ -57,7 +109,10 @@ const ListingDescription = () => {
       </div>
 
       {/* Listing destination brief images */}
-      <div className="grid gap-2 grid-cols-4 grid-rows-2 mt-6 relative">
+      <div
+        id="imageGallery"
+        className="grid gap-2 grid-cols-4 grid-rows-2 mt-6 relative"
+      >
         <div className="bg-accent transition-all duration-300 hover:brightness-75 w-full col-span-2 row-span-2 rounded-l-2xl">
           <img
             src="https://a0.muscache.com/im/pictures/miso/Hosting-5264493/original/10d2c21f-84c2-46c5-b20b-b51d1c2c971a.jpeg?im_w=720"
@@ -139,7 +194,7 @@ const ListingDescription = () => {
           <div className="space-y-6 py-10">
             <div className="flex gap-4 justify-start items-start">
               <div className="self-start">
-                <i class="fa-solid fa-house-laptop fa-xl"></i>
+                <i className="fa-solid fa-house-laptop fa-xl"></i>
               </div>
 
               <div className="space-y-0.5">
@@ -235,7 +290,7 @@ const ListingDescription = () => {
             <p className="text-xl font-medium">Where you'll sleep</p>
 
             <div className="p-6 border-[1px] w-max pr-20 rounded-lg">
-              <i class="fa-solid fa-bed fa-xl"></i>
+              <i className="fa-solid fa-bed fa-xl"></i>
               <p className="font-medium mt-5">Bedroom</p>
               <p className="font-light mt-2 text-sm">1 double bed</p>
             </div>
@@ -319,7 +374,7 @@ const ListingDescription = () => {
 
               {/* Review and rating shit */}
               <div className="flex justify-center items-center gap-1 w-full">
-                <i class="fa-solid fa-star fa-xs"></i>
+                <i className="fa-solid fa-star fa-xs"></i>
                 <span className="text-sm font-medium">4.96</span>
                 <span className="text-xs font-light self-end">•</span>
                 <span className="text-sm font-medium text-[#717171] underline">
@@ -350,14 +405,16 @@ const ListingDescription = () => {
                   <p className="text-sm font-light">1 guest</p>
                 </div>
 
-                <i class="fa-solid fa-chevron-down"></i>
+                <i className="fa-solid fa-chevron-down"></i>
               </div>
             </div>
 
             {/* Reserve button */}
-            <button className="w-full py-3 bg-[#F2265E] text-white rounded-lg">
-              Reserve
-            </button>
+            <div id="reserveListingButton" className="w-full">
+              <button className="w-full py-3 bg-[#F2265E] text-white rounded-lg">
+                Reserve
+              </button>
+            </div>
 
             <p className="font-light text-sm">You won't be charged yet</p>
 
@@ -391,7 +448,7 @@ const ListingDescription = () => {
 
           {/* Report listing */}
           <div className="flex justify-center items-center gap-4 text-[#717171] cursor-pointer">
-            <i class="fa-solid fa-flag fa-sm"></i>
+            <i className="fa-solid fa-flag fa-sm"></i>
 
             <p className="text-sm underline font-medium">Report this listing</p>
           </div>
